@@ -1,0 +1,110 @@
+.simple-appointment-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  background-color: var(--background-secondary);
+  transition: all 0.2s ease;
+}
+
+.simple-appointment-card:hover {
+  background-color: var(--background-primary);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+.simple-appointment-card.completed {
+  background-color: #F0FDF4;
+  border-color: var(--success-green);
+}
+
+.simple-appointment-card.scheduled {
+  background-color: #EEF2FF;
+  border-color: var(--secondary-blue);
+}
+
+.appointment-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.appointment-icon {
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--background-primary);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+.appointment-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.appointment-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.appointment-time {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.completion-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-mark {
+  width: 24px;
+  height: 24px;
+  background-color: var(--success-green);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .simple-appointment-card {
+    padding: 0.75rem;
+  }
+  
+  .appointment-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+  
+  .appointment-title {
+    font-size: 0.8125rem;
+  }
+  
+  .appointment-time {
+    font-size: 0.6875rem;
+  }
+  
+  .check-mark {
+    width: 20px;
+    height: 20px;
+    font-size: 0.6875rem;
+  }
+}
